@@ -21,6 +21,9 @@ import os
 
 df_train=pd.read_csv("../data/train_fe_small.csv")
 #df_test=pd.read_csv("../data/milk_test_fe.csv")
+cols = ['region_South', 'region_West', 'account_length','number_vmail_messages', 'total_day_minutes', 'total_day_calls',
+        'total_intl_charge', 'customer_service_calls', 'churn']
+df_train = df_train[cols]
 
 from sklearn.model_selection import train_test_split
 df_train, df_val = train_test_split(df_train, random_state = 42, train_size=0.8)
@@ -45,7 +48,7 @@ y_val = y_val.to_numpy()
 from qiskit.circuit import ParameterVector, Parameter
 
 ### Feature map
-pauli_feature_map = PauliFeatureMap(feature_dimension=len(X_train.columns), reps=1)
+pauli_feature_map = PauliFeatureMap(feature_dimension=len(X_train.columns),reps=1, paulis=['ZZ'])
 
 ### Ansatzes
 ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 2, su2_gates=["ry", "rz"], entanglement= "full",
