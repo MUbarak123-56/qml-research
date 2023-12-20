@@ -1,0 +1,2 @@
+feature_map_type,train_score,val_score,f1_val,f1_train,prec_train,prec_val,recall_train,recall_val,Quantum Kernel,Model,tau,C
+Pauli,0.5,0.5,0.0,0.0,0.0,0.0,0.0,0.0,Yes,PEGASOS,20,100
