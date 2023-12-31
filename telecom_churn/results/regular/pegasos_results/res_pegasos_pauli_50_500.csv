@@ -1,2 +1,2 @@
-feature_map_type,train_score,val_score,f1_val,f1_train,prec_train,prec_val,recall_train,recall_val,Quantum Kernel,Model,tau,C
-Pauli,0.6,0.5769230769230769,0.5975609756097561,0.6050955414012739,0.5974842767295597,0.5697674418604651,0.6129032258064516,0.6282051282051282,Yes,PEGASOS,50,500
+feature_map_type,train_score,val_score,f1_val,f1_train,prec_train,prec_val,recall_train,recall_val,Quantum Kernel,Training time,Model,tau,C
+Pauli,0.5112903225806451,0.5,0.6666666666666666,0.6717226435536294,0.5057096247960848,0.5,1.0,1.0,Yes,22.53395700454712,PEGASOS,50,500

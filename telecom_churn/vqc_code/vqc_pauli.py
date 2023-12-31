@@ -51,7 +51,7 @@ from qiskit.circuit import ParameterVector, Parameter
 pauli_feature_map = PauliFeatureMap(feature_dimension=len(X_train.columns),reps=1, paulis=['ZZ'])
 
 ### Ansatzes
-ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 3, su2_gates=["ry", "rz"], entanglement= "full",
+ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 1, su2_gates=["ry", "rz"], entanglement= "full",
                          insert_barriers=True)
 ansatz_two_local = TwoLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=["ry", "rz"],entanglement_blocks="cx",
                                      entanglement="linear", reps=2, insert_barriers=True)
@@ -65,7 +65,7 @@ ansatz_n_local = NLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=[RX
 num_iter=300
 cobyla = COBYLA(maxiter = num_iter)
 spsa = SPSA(maxiter = num_iter)
-reps = 3
+reps = 1
 
 def plot_confusion_matrix(conf_matrix, ansatz, optimizer):
     #num = len(os.listdir("../vqc_conf/train_"))

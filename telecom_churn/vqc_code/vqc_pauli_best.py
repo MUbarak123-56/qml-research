@@ -52,7 +52,9 @@ y_train_arr = y_train_use.to_numpy()
 x_test_arr = x_test.to_numpy()
 y_test_arr = y_test.to_numpy()
 
+start = time.time()
 model.fit(x_train_arr, y_train_arr)
+elapsed = time.time() - start
 
 pred_use = model.predict(x_train_arr)
 pred_test = model.predict(x_test_arr)
@@ -65,6 +67,12 @@ f1_test = f1_score(y_test, pred_test)
 prec_test = precision_score(y_test, pred_test)
 recall_test = recall_score(y_test, pred_test)
 
+conf = confusion_matrix(y_test, pred_test)
+plt.figure(figsize=(10,10))
+sns.heatmap(conf, annot=True, cmap="Blues")
+#plt.show();
+plt.savefig("../vqc_conf/vqc_best.png")
+
 df = pd.DataFrame()
 df["f1_test"] = [f1_test]
 df["f1_train"] = f1_train
@@ -73,5 +81,6 @@ df["prec_test"] = prec_test
 df["recall_train"] = recall_train
 df["recall_test"] = recall_test
 df["model"] = "VQC_best"
+df["elapsed"] = elapsed
 
 df.to_csv("../vqc_results/final/vqc.csv", index=False)

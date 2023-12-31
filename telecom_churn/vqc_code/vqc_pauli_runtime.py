@@ -28,7 +28,7 @@ cols = ['total_day_minutes', 'total_day_calls','total_intl_charge', 'customer_se
 x_train = train[cols]
 y_train = train["churn"]
 
-sizes = np.linspace(0.1,1,10)
+sizes = np.linspace(0.1,1,8)
 sizes = list(sizes)
 
 num_iter=300
@@ -63,11 +63,11 @@ def vqc_runtime(ansatz, optimizer):
                         entanglement=[[0, 1, 2], [0,2,1]],reps=2,insert_barriers=True)
 
 
-        ansatz = ansatz_use
+        #ansatz = ansatz_use
         model = VQC(
             sampler=sampler,
             feature_map=pauli_feature_map,
-            ansatz=ansatz,
+            ansatz=ansatz_use,
             optimizer=optim_use)
         new_x_arr = new_x.to_numpy()
         #new_y_arr = new_y.to_numpy()
@@ -76,9 +76,10 @@ def vqc_runtime(ansatz, optimizer):
         stop = time.time()
         elapsed=stop-start
         size.loc[i, "size"] = sizes[i]*len(train)
-        size.loc[i, "model"] = "VQC" + "_" + str(ansatz) + "_" + str(optimizer)
+        size.loc[i, "model"] = "vqc" + "_" + str(ansatz) + "_" + str(optimizer)
         size.loc[i, "runtime"] = elapsed
         #size.loc[i,"kernel"] = typ
+        print("size: ", i)
     size.to_csv("../vqc_results/runtime_size/vqc" + "_" + str(ansatz) + "_" + str(optimizer) + ".csv", index=False)
     
     feat = pd.DataFrame()
@@ -107,24 +108,27 @@ def vqc_runtime(ansatz, optimizer):
                         entanglement=[[0, 1, 2], [0,2,1]],reps=2,insert_barriers=True)
 
 
-        ansatz = ansatz_use
+        #ansatz = ansatz_use
         model = VQC(
             sampler=sampler,
             feature_map=pauli_feature_map,
-            ansatz=ansatz_su,
-            optimizer=cobyla)
+            ansatz=ansatz_use,
+            optimizer=optim_use)
         start = time.time()
         model.fit(new_x_arr, new_y)
         stop = time.time()
         elapsed=stop-start
         feat.loc[i, "num_features"] = i + 1
-        feat.loc[i, "model"] = "VQC" + "_" + str(ansatz) + "_" + str(optimizer)
+        feat.loc[i, "model"] = "vqc" + "_" + str(ansatz) + "_" + str(optimizer)
         feat.loc[i, "runtime"] = elapsed
         #feat.loc[i,"kernel"] = typ
+        print("num of features: ", i)
     feat.to_csv("../vqc_results/runtime_features/vqc" + "_" + str(ansatz) + "_" + str(optimizer) + ".csv", index=False)
 
-optim = ["cobyla", "spsa"]
-ansatz_list = ["su2", "two_local", "n_local"]
+#optim = ["cobyla", "spsa"]
+#ansatz_list = ["su2", "two_local", "n_local"]
+optim = ["cobyla"]
+ansatz_list = ["su2"]
 for i in range(len(optim)):
     for j in range(len(ansatz_list)):
         vqc_runtime(ansatz_list[j], optim[i])
