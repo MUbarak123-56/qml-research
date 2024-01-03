@@ -1,0 +1,792 @@
+Tau: 1, C: 10, Training Completed, Start Validating
+{'Training Time': 0.0006604194641113281, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 1, C: 100, Training Completed, Start Validating
+{'Training Time': 0.0005471706390380859, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 1, C: 200, Training Completed, Start Validating
+{'Training Time': 0.0003085136413574219, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 1, C: 500, Training Completed, Start Validating
+{'Training Time': 0.00035119056701660156, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67       310
+         1.0       0.00      0.00      0.00       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67        78
+         1.0       0.00      0.00      0.00        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 1, C: 750, Training Completed, Start Validating
+{'Training Time': 0.00029659271240234375, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 1, C: 1000, Training Completed, Start Validating
+{'Training Time': 0.0006043910980224609, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 10, C: 10, Training Completed, Start Validating
+{'Training Time': 0.9600033760070801, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.01      0.02       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.75      0.50      0.34       620
+weighted avg       0.75      0.50      0.34       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 10, C: 100, Training Completed, Start Validating
+{'Training Time': 0.722405195236206, 'val Score': 0.5576923076923077}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.48      0.49      0.48       310
+         1.0       0.48      0.47      0.48       310
+
+    accuracy                           0.48       620
+   macro avg       0.48      0.48      0.48       620
+weighted avg       0.48      0.48      0.48       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.56      0.53      0.54        78
+         1.0       0.55      0.59      0.57        78
+
+    accuracy                           0.56       156
+   macro avg       0.56      0.56      0.56       156
+weighted avg       0.56      0.56      0.56       156
+
+Tau: 10, C: 200, Training Completed, Start Validating
+{'Training Time': 0.9333786964416504, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 10, C: 500, Training Completed, Start Validating
+{'Training Time': 1.03924560546875, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 10, C: 750, Training Completed, Start Validating
+{'Training Time': 0.8034834861755371, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67       310
+         1.0       0.00      0.00      0.00       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67        78
+         1.0       0.00      0.00      0.00        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 10, C: 1000, Training Completed, Start Validating
+{'Training Time': 0.7583086490631104, 'val Score': 0.5064102564102564}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.50      0.60      0.54       310
+         1.0       0.50      0.41      0.45       310
+
+    accuracy                           0.50       620
+   macro avg       0.50      0.50      0.50       620
+weighted avg       0.50      0.50      0.50       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.51      0.59      0.54        78
+         1.0       0.51      0.42      0.46        78
+
+    accuracy                           0.51       156
+   macro avg       0.51      0.51      0.50       156
+weighted avg       0.51      0.51      0.50       156
+
+Tau: 20, C: 10, Training Completed, Start Validating
+{'Training Time': 3.4187304973602295, 'val Score': 0.5256410256410257}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.55      0.62      0.58       310
+         1.0       0.56      0.49      0.52       310
+
+    accuracy                           0.55       620
+   macro avg       0.55      0.55      0.55       620
+weighted avg       0.55      0.55      0.55       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.52      0.62      0.56        78
+         1.0       0.53      0.44      0.48        78
+
+    accuracy                           0.53       156
+   macro avg       0.53      0.53      0.52       156
+weighted avg       0.53      0.53      0.52       156
+
+Tau: 20, C: 100, Training Completed, Start Validating
+{'Training Time': 2.749998092651367, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67       310
+         1.0       1.00      0.00      0.01       310
+
+    accuracy                           0.50       620
+   macro avg       0.75      0.50      0.34       620
+weighted avg       0.75      0.50      0.34       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67        78
+         1.0       0.00      0.00      0.00        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 20, C: 200, Training Completed, Start Validating
+{'Training Time': 3.8357818126678467, 'val Score': 0.46794871794871795}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.51      0.54      0.53       310
+         1.0       0.52      0.49      0.50       310
+
+    accuracy                           0.51       620
+   macro avg       0.51      0.51      0.51       620
+weighted avg       0.51      0.51      0.51       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.47      0.53      0.50        78
+         1.0       0.46      0.41      0.44        78
+
+    accuracy                           0.47       156
+   macro avg       0.47      0.47      0.47       156
+weighted avg       0.47      0.47      0.47       156
+
+Tau: 20, C: 500, Training Completed, Start Validating
+{'Training Time': 2.2096478939056396, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 20, C: 750, Training Completed, Start Validating
+{'Training Time': 3.013533592224121, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.00      0.01       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.75      0.50      0.34       620
+weighted avg       0.75      0.50      0.34       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 20, C: 1000, Training Completed, Start Validating
+{'Training Time': 2.4826626777648926, 'val Score': 0.47435897435897434}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.53      0.59      0.56       310
+         1.0       0.54      0.47      0.50       310
+
+    accuracy                           0.53       620
+   macro avg       0.53      0.53      0.53       620
+weighted avg       0.53      0.53      0.53       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.48      0.55      0.51        78
+         1.0       0.47      0.40      0.43        78
+
+    accuracy                           0.47       156
+   macro avg       0.47      0.47      0.47       156
+weighted avg       0.47      0.47      0.47       156
+
+Tau: 50, C: 10, Training Completed, Start Validating
+{'Training Time': 24.791036128997803, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00       310
+         1.0       0.50      1.00      0.67       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 50, C: 100, Training Completed, Start Validating
+{'Training Time': 24.337528944015503, 'val Score': 0.5512820512820513}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.56      0.61      0.58       310
+         1.0       0.57      0.52      0.54       310
+
+    accuracy                           0.56       620
+   macro avg       0.56      0.56      0.56       620
+weighted avg       0.56      0.56      0.56       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.55      0.62      0.58        78
+         1.0       0.56      0.49      0.52        78
+
+    accuracy                           0.55       156
+   macro avg       0.55      0.55      0.55       156
+weighted avg       0.55      0.55      0.55       156
+
+Tau: 50, C: 200, Training Completed, Start Validating
+{'Training Time': 24.931930541992188, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.03      0.05       310
+         1.0       0.51      1.00      0.67       310
+
+    accuracy                           0.51       620
+   macro avg       0.75      0.51      0.36       620
+weighted avg       0.75      0.51      0.36       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 50, C: 500, Training Completed, Start Validating
+{'Training Time': 22.53395700454712, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.02      0.04       310
+         1.0       0.51      1.00      0.67       310
+
+    accuracy                           0.51       620
+   macro avg       0.75      0.51      0.36       620
+weighted avg       0.75      0.51      0.36       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 50, C: 750, Training Completed, Start Validating
+{'Training Time': 19.614576816558838, 'val Score': 0.5384615384615384}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.55      0.70      0.62       310
+         1.0       0.59      0.43      0.50       310
+
+    accuracy                           0.56       620
+   macro avg       0.57      0.56      0.56       620
+weighted avg       0.57      0.56      0.56       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.53      0.71      0.60        78
+         1.0       0.56      0.37      0.45        78
+
+    accuracy                           0.54       156
+   macro avg       0.54      0.54      0.53       156
+weighted avg       0.54      0.54      0.53       156
+
+Tau: 50, C: 1000, Training Completed, Start Validating
+{'Training Time': 19.282079696655273, 'val Score': 0.5448717948717948}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.57      0.55      0.56       310
+         1.0       0.56      0.58      0.57       310
+
+    accuracy                           0.57       620
+   macro avg       0.57      0.57      0.57       620
+weighted avg       0.57      0.57      0.57       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.55      0.54      0.54        78
+         1.0       0.54      0.55      0.55        78
+
+    accuracy                           0.54       156
+   macro avg       0.54      0.54      0.54       156
+weighted avg       0.54      0.54      0.54       156
+
+Tau: 100, C: 10, Training Completed, Start Validating
+{'Training Time': 117.77209377288818, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67       310
+         1.0       0.00      0.00      0.00       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67        78
+         1.0       0.00      0.00      0.00        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 100, C: 100, Training Completed, Start Validating
+{'Training Time': 85.3434567451477, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.51      1.00      0.67       310
+         1.0       0.90      0.03      0.06       310
+
+    accuracy                           0.51       620
+   macro avg       0.70      0.51      0.36       620
+weighted avg       0.70      0.51      0.36       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67        78
+         1.0       0.00      0.00      0.00        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 100, C: 200, Training Completed, Start Validating
+{'Training Time': 91.49363875389099, 'val Score': 0.5192307692307693}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.96      0.08      0.15       310
+         1.0       0.52      1.00      0.68       310
+
+    accuracy                           0.54       620
+   macro avg       0.74      0.54      0.42       620
+weighted avg       0.74      0.54      0.42       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.04      0.07        78
+         1.0       0.51      1.00      0.68        78
+
+    accuracy                           0.52       156
+   macro avg       0.75      0.52      0.37       156
+weighted avg       0.75      0.52      0.37       156
+
+Tau: 100, C: 500, Training Completed, Start Validating
+{'Training Time': 79.83206343650818, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.93      0.05      0.09       310
+         1.0       0.51      1.00      0.68       310
+
+    accuracy                           0.52       620
+   macro avg       0.72      0.52      0.38       620
+weighted avg       0.72      0.52      0.38       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.00      0.00      0.00        78
+         1.0       0.50      1.00      0.67        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 100, C: 750, Training Completed, Start Validating
+{'Training Time': 85.60477685928345, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.51      1.00      0.68       310
+         1.0       1.00      0.05      0.10       310
+
+    accuracy                           0.53       620
+   macro avg       0.76      0.53      0.39       620
+weighted avg       0.76      0.53      0.39       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67        78
+         1.0       0.00      0.00      0.00        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 100, C: 1000, Training Completed, Start Validating
+{'Training Time': 71.99044179916382, 'val Score': 0.5512820512820513}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.57      0.67      0.62       310
+         1.0       0.60      0.49      0.54       310
+
+    accuracy                           0.58       620
+   macro avg       0.58      0.58      0.58       620
+weighted avg       0.58      0.58      0.58       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.54      0.69      0.61        78
+         1.0       0.57      0.41      0.48        78
+
+    accuracy                           0.55       156
+   macro avg       0.56      0.55      0.54       156
+weighted avg       0.56      0.55      0.54       156
+
+Tau: 200, C: 10, Training Completed, Start Validating
+{'Training Time': 461.4034843444824, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67       310
+         1.0       0.00      0.00      0.00       310
+
+    accuracy                           0.50       620
+   macro avg       0.25      0.50      0.33       620
+weighted avg       0.25      0.50      0.33       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67        78
+         1.0       0.00      0.00      0.00        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 200, C: 100, Training Completed, Start Validating
+{'Training Time': 335.926570892334, 'val Score': 0.5448717948717948}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.84      0.22      0.35       310
+         1.0       0.55      0.96      0.70       310
+
+    accuracy                           0.59       620
+   macro avg       0.70      0.59      0.52       620
+weighted avg       0.70      0.59      0.52       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.77      0.13      0.22        78
+         1.0       0.52      0.96      0.68        78
+
+    accuracy                           0.54       156
+   macro avg       0.65      0.54      0.45       156
+weighted avg       0.65      0.54      0.45       156
+
+Tau: 200, C: 200, Training Completed, Start Validating
+{'Training Time': 310.54201436042786, 'val Score': 0.5641025641025641}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.65      0.70      0.67       310
+         1.0       0.67      0.63      0.65       310
+
+    accuracy                           0.66       620
+   macro avg       0.66      0.66      0.66       620
+weighted avg       0.66      0.66      0.66       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.55      0.65      0.60        78
+         1.0       0.58      0.47      0.52        78
+
+    accuracy                           0.56       156
+   macro avg       0.57      0.56      0.56       156
+weighted avg       0.57      0.56      0.56       156
+
+Tau: 200, C: 500, Training Completed, Start Validating
+{'Training Time': 299.7785153388977, 'val Score': 0.5}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.52      1.00      0.68       310
+         1.0       1.00      0.07      0.13       310
+
+    accuracy                           0.54       620
+   macro avg       0.76      0.54      0.41       620
+weighted avg       0.76      0.54      0.41       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.50      1.00      0.67        78
+         1.0       0.00      0.00      0.00        78
+
+    accuracy                           0.50       156
+   macro avg       0.25      0.50      0.33       156
+weighted avg       0.25      0.50      0.33       156
+
+Tau: 200, C: 750, Training Completed, Start Validating
+{'Training Time': 241.94069647789001, 'val Score': 0.5256410256410257}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.93      0.13      0.23       310
+         1.0       0.53      0.99      0.69       310
+
+    accuracy                           0.56       620
+   macro avg       0.73      0.56      0.46       620
+weighted avg       0.73      0.56      0.46       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.05      0.10        78
+         1.0       0.51      1.00      0.68        78
+
+    accuracy                           0.53       156
+   macro avg       0.76      0.53      0.39       156
+weighted avg       0.76      0.53      0.39       156
+
+Tau: 200, C: 1000, Training Completed, Start Validating
+{'Training Time': 184.16423654556274, 'val Score': 0.6153846153846154}
+Classification Report Train:
+              precision    recall  f1-score   support
+
+         0.0       0.65      0.72      0.69       310
+         1.0       0.69      0.62      0.65       310
+
+    accuracy                           0.67       620
+   macro avg       0.67      0.67      0.67       620
+weighted avg       0.67      0.67      0.67       620
+
+Classification Report val:
+              precision    recall  f1-score   support
+
+         0.0       0.60      0.67      0.63        78
+         1.0       0.63      0.56      0.59        78
+
+    accuracy                           0.62       156
+   macro avg       0.62      0.62      0.61       156
+weighted avg       0.62      0.62      0.61       156
+

@@ -46,6 +46,7 @@ for i in range(len(sizes)):
     size.loc[i, "model"] = "QSVC"
     size.loc[i, "runtime"] = elapsed
     #size.loc[i,"kernel"] = typ
+    print("size ", i)
 
 size.to_csv("../results/runtime_size/qsvc.csv", index=False)
 feat = pd.DataFrame()
@@ -67,4 +68,5 @@ for i in range(1,len(cols)):
     feat.loc[i, "model"] = "QSVC"
     feat.loc[i, "runtime"] = elapsed
     #feat.loc[i,"kernel"] = typ
+    print("feat ", i)
 feat.to_csv("../results/runtime_features/qsvc.csv", index=False)
