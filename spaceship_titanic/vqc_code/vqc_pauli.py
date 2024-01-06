@@ -19,10 +19,9 @@ import time
 from qiskit_machine_learning.algorithms.classifiers import VQC
 import os
 
-df_train=pd.read_csv("../data/train_fe_small.csv")
+df_train=pd.read_csv("../data/train_fe.csv")
 #df_test=pd.read_csv("../data/milk_test_fe.csv")
-cols = ['region_South', 'region_West', 'account_length','number_vmail_messages', 'total_day_minutes', 'total_day_calls',
-        'total_intl_charge', 'customer_service_calls', 'churn']
+cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
 df_train = df_train[cols]
 
 from sklearn.model_selection import train_test_split
@@ -32,11 +31,11 @@ sampler = Sampler()
 #optimizer = COBYLA(maxiter = 300)
 #optimizer = SPSA(maxiter = 300)
 
-X_train = df_train.drop(columns=['churn'])
-y_train = df_train['churn']
+X_train = df_train.drop(columns=['transported'])
+y_train = df_train['transported']
 
-X_val = df_val.drop(columns=['churn'])
-y_val = df_val['churn']
+X_val = df_val.drop(columns=['transported'])
+y_val = df_val['transported']
 
 x_train_arr = np.array(X_train)
 x_val_arr = np.array(X_val)
@@ -51,7 +50,7 @@ from qiskit.circuit import ParameterVector, Parameter
 pauli_feature_map = PauliFeatureMap(feature_dimension=len(X_train.columns),reps=1, paulis=['ZZ'])
 
 ### Ansatzes
-ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 1, su2_gates=["ry", "rz"], entanglement= "full",
+ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 2, su2_gates=["ry", "rz"], entanglement= "full",
                          insert_barriers=True)
 ansatz_two_local = TwoLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=["ry", "rz"],entanglement_blocks="cx",
                                      entanglement="linear", reps=2, insert_barriers=True)

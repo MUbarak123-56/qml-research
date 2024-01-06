@@ -22,11 +22,10 @@ import os
 
 train = pd.read_csv("../data/train_fe.csv")
 
-cols = ['total_day_minutes', 'total_day_calls','total_intl_charge', 'customer_service_calls', 'account_length','number_vmail_messages', 
-        'region_South', 'region_West']
+cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
 
 x_train = train[cols]
-y_train = train["churn"]
+y_train = train["transported"]
 
 sizes = np.linspace(0.1,1,8)
 sizes = list(sizes)

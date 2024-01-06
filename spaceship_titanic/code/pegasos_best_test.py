@@ -15,14 +15,13 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 
-train = pd.read_csv("../data/train_fe_small.csv")
+train = pd.read_csv("../data/train_fe.csv")
 test = pd.read_csv("../data/test_fe.csv")
 
-cols = ['region_South', 'region_West', 'account_length','number_vmail_messages', 'total_day_minutes', 'total_day_calls',
-        'total_intl_charge', 'customer_service_calls', 'churn']
+cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
 
 train = train[cols]
-x_train_use, y_train_use = train.drop("churn", axis = 1), train["churn"]
+x_train_use, y_train_use = train.drop("transported", axis = 1), train["transported"]
 
 x_train_use = x_train_use.to_numpy()
 y_train_use = y_train_use.to_numpy()
@@ -37,7 +36,7 @@ from sklearn.metrics import classification_report,f1_score, precision_score, rec
 
 test = test[cols]
 
-x_test, y_test = test.drop("churn", axis =1), test["churn"]
+x_test, y_test = test.drop("transported", axis =1), test["transported"]
 
 x_test = x_test.to_numpy()
 y_test = y_test.to_numpy()
