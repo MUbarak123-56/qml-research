@@ -5,11 +5,10 @@ import matplotlib.pyplot as plt
 
 train = pd.read_csv("../data/train_fe.csv")
 
-cols = ['total_day_minutes', 'total_day_calls','total_intl_charge', 'customer_service_calls', 'account_length','number_vmail_messages', 
-        'region_South', 'region_West']
+cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars']
 
 x_train = train[cols]
-y_train = train["churn"]
+y_train = train['transported']
 
 import numpy as np
 from sklearn.model_selection import cross_val_score
@@ -23,7 +22,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-num_qubits = 8
+num_qubits = 7
 algorithm_globals.random_seed = 12345
 
 # Define the feature map
@@ -33,7 +32,7 @@ feature_map = PauliFeatureMap(feature_dimension=num_qubits, reps=1)
 qkernel = FidelityQuantumKernel(feature_map=feature_map)
 
 # Initialize the QSVC model
-model = PegasosQSVC(quantum_kernel=qkernel, C=1000, num_steps=200)
+model = PegasosQSVC(quantum_kernel=qkernel, C=500, num_steps=200)
 
 sizes = np.linspace(0.1,1,10)
 sizes = list(sizes)

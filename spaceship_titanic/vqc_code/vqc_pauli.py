@@ -19,29 +19,43 @@ import time
 from qiskit_machine_learning.algorithms.classifiers import VQC
 import os
 
-df_train=pd.read_csv("../data/train_fe.csv")
-#df_test=pd.read_csv("../data/milk_test_fe.csv")
-cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
-df_train = df_train[cols]
+train = pd.read_csv("../data/train_fe.csv")
+test = pd.read_csv("../data/test_fe.csv")
 
-from sklearn.model_selection import train_test_split
-df_train, df_val = train_test_split(df_train, random_state = 42, train_size=0.8)
+cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
+
+train = train[cols]
+x_train_use, y_train_use = train.drop("transported", axis = 1), train["transported"]
+
+x_train_use = x_train_use.to_numpy()
+y_train_use = y_train_use.to_numpy()
+
+#df_test=pd.read_csv("../data/milk_test_fe.csv")
+#cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
+#df_train = df_train[cols]
+
+#from sklearn.model_selection import train_test_split
+#df_train, df_val = train_test_split(df_train, random_state = 42, train_size=0.8)
 
 sampler = Sampler()
 #optimizer = COBYLA(maxiter = 300)
 #optimizer = SPSA(maxiter = 300)
 
-X_train = df_train.drop(columns=['transported'])
-y_train = df_train['transported']
+#X_train = df_train.drop(columns=['transported'])
+#y_train = df_train['transported']
 
-X_val = df_val.drop(columns=['transported'])
-y_val = df_val['transported']
+test = test[cols]
 
-x_train_arr = np.array(X_train)
-x_val_arr = np.array(X_val)
+x_test, y_test = test.drop("transported", axis =1), test["transported"]
 
-y_train=y_train.to_numpy()
-y_val = y_val.to_numpy()
+x_test = x_test.to_numpy()
+y_test = y_test.to_numpy()
+
+#x_train_arr = np.array(X_train)
+#x_val_arr = np.array(X_val)
+
+#y_train=y_train.to_numpy()
+#y_val = y_val.to_numpy()
 
 
 from qiskit.circuit import ParameterVector, Parameter
@@ -64,7 +78,7 @@ ansatz_n_local = NLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=[RX
 num_iter=300
 cobyla = COBYLA(maxiter = num_iter)
 spsa = SPSA(maxiter = num_iter)
-reps = 1
+reps = 2
 
 def plot_confusion_matrix(conf_matrix, ansatz, optimizer):
     #num = len(os.listdir("../vqc_conf/train_"))
@@ -113,7 +127,7 @@ def vqc_exp(ansatz, optimizer):
     )
 
     start = time.time()
-    vqc.fit(x_train_arr, y_train)
+    vqc.fit(x_train_use, y_train_use)
     elapsed = time.time() - start
 
     #num = len(os.listdir("../vqc_model/pauli"))
@@ -122,30 +136,43 @@ def vqc_exp(ansatz, optimizer):
 
     print(f"Training time: {round(elapsed)} seconds")
 
-    train_score = vqc.score(x_train_arr, y_train)
-    val_score = vqc.score(x_val_arr, y_val)
+    #train_score = vqc.score(x_train_arr, y_train)
+    #val_score = vqc.score(x_val_arr, y_val)
 
     #vqc.save("vqc_enc_classifier.model")
 
-    print(f"VQC on the training dataset: {train_score:.2f}")
-    print(f"VQC on the val dataset:     {val_score:.2f}")
+    #print(f"VQC on the training dataset: {train_score:.2f}")
+    #print(f"VQC on the val dataset:     {val_score:.2f}")
     
-    pred_vqc = vqc.predict(x_val_arr)
-    conf_matrix = confusion_matrix(y_val, pred_vqc)
+    pred_train = vqc.predict(x_train_use)
+    pred_test = vqc.predict(x_test)
+    conf_matrix = confusion_matrix(y_test, pred_test)
 
     plot_confusion_matrix(conf_matrix, ansatz, optimizer)
-    print(classification_report(y_val, pred_vqc))
+    print(classification_report(y_test, pred_test))
     print("\n")
 
     df = pd.DataFrame({"one":[1]})
 
+    f1_train = f1_score(y_train_use, pred_train)
+    prec_train = precision_score(y_train_use, pred_train)
+    recall_train = recall_score(y_train_use, pred_train)
+
+
+    f1_test = f1_score(y_test, pred_test)
+    prec_test = precision_score(y_test, pred_test)
+    recall_test = recall_score(y_test, pred_test)
+
+    df = pd.DataFrame()
+    df["f1_train"] = f1_train
+    df["f1_test"] = f1_test
+    df["prec_train"] = prec_train
+    df["prec_test"] = prec_test
+    df["recall_train"] = recall_train
+    df["recall_test"] = recall_test
+    df["elapsed"] = elapsed
     df["feature_map_type"] = "Pauli"
     df["optimizer"] = optimizer
-    df["train_score"] = train_score
-    df["val_score"] = val_score
-    df["recall_score"] = recall_score(y_val, pred_vqc)
-    df["f1_score"] = f1_score(y_val, pred_vqc)
-    df["precision_score"] = precision_score(y_val, pred_vqc)
     #df["Quantum Kernel"] = "No"
     #df["PCA"] = "No"
     df["objective_vals"] = str(objective_func_vals)

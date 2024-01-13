@@ -49,10 +49,14 @@ x_train_use=np.array(x_train_use)
 y_train_use=np.array(y_train_use) 
 
 start = time.time()
+print("Training commences!!!")
 model.fit(x_train_use, y_train_use)
 elapsed = time.time() - start
+print("Training has finished", elapsed)
 
+print("Prediction begins")
 pred_use = model.predict(x_train_use)
+print("End of prediction")
 
 f1_train = f1_score(y_train_use, pred_use)
 prec_train = precision_score(y_train_use, pred_use)
