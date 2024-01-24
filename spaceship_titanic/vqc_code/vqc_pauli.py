@@ -61,24 +61,25 @@ y_test = y_test.to_numpy()
 from qiskit.circuit import ParameterVector, Parameter
 
 ### Feature map
-pauli_feature_map = PauliFeatureMap(feature_dimension=len(X_train.columns),reps=1, paulis=['ZZ'])
+pauli_feature_map = PauliFeatureMap(feature_dimension=x_train_use.shape[1],reps=1, paulis=['ZZ'])
 
+reps =2
 ### Ansatzes
-ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 2, su2_gates=["ry", "rz"], entanglement= "full",
+ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = reps, su2_gates=["ry", "rz"], entanglement= "full",
                          insert_barriers=True)
 ansatz_two_local = TwoLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=["ry", "rz"],entanglement_blocks="cx",
-                                     entanglement="linear", reps=2, insert_barriers=True)
+                                     entanglement="linear", reps=reps, insert_barriers=True)
 
 theta = Parameter("θ")
 ansatz_n_local = NLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=[RXGate(theta), CRZGate(theta)],
                         entanglement_blocks=CCXGate(),
-                        entanglement=[[0, 1, 2], [0,2,1]],reps=2,insert_barriers=True)
+                        entanglement=[[0, 1, 2], [0,2,1]],reps=reps,insert_barriers=True)
 
 ### Optimizers
-num_iter=300
+num_iter=100
 cobyla = COBYLA(maxiter = num_iter)
 spsa = SPSA(maxiter = num_iter)
-reps = 2
+#reps = 2
 
 def plot_confusion_matrix(conf_matrix, ansatz, optimizer):
     #num = len(os.listdir("../vqc_conf/train_"))
@@ -163,7 +164,6 @@ def vqc_exp(ansatz, optimizer):
     prec_test = precision_score(y_test, pred_test)
     recall_test = recall_score(y_test, pred_test)
 
-    df = pd.DataFrame()
     df["f1_train"] = f1_train
     df["f1_test"] = f1_test
     df["prec_train"] = prec_train

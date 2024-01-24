@@ -32,7 +32,7 @@ feature_map = PauliFeatureMap(feature_dimension=num_qubits, reps=1)
 qkernel = FidelityQuantumKernel(feature_map=feature_map)
 
 # Initialize the QSVC model
-model = PegasosQSVC(quantum_kernel=qkernel, C=500, num_steps=200)
+model = PegasosQSVC(quantum_kernel=qkernel, C=100, num_steps=300)
 
 sizes = np.linspace(0.1,1,10)
 sizes = list(sizes)
