@@ -19,13 +19,13 @@ import time
 from qiskit_machine_learning.algorithms.classifiers import VQC
 import os
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 test = pd.read_csv("../data/test_fe.csv")
 
-cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
+#cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
 
-train = train[cols]
-x_train_use, y_train_use = train.drop("transported", axis = 1), train["transported"]
+#train = train[cols]
+x_train_use, y_train_use = train.drop("target", axis = 1), train["target"]
 
 x_train_use = x_train_use.to_numpy()
 y_train_use = y_train_use.to_numpy()
@@ -44,9 +44,9 @@ sampler = Sampler()
 #X_train = df_train.drop(columns=['transported'])
 #y_train = df_train['transported']
 
-test = test[cols]
+#test = test[cols]
 
-x_test, y_test = test.drop("transported", axis =1), test["transported"]
+x_test, y_test = test.drop("target", axis =1), test["target"]
 
 x_test = x_test.to_numpy()
 y_test = y_test.to_numpy()
