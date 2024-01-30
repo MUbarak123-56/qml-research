@@ -63,7 +63,7 @@ from qiskit.circuit import ParameterVector, Parameter
 ### Feature map
 pauli_feature_map = PauliFeatureMap(feature_dimension=x_train_use.shape[1],reps=1, paulis=['ZZ'])
 
-reps = 3
+reps = 1
 ### Ansatzes
 ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = reps, su2_gates=["ry", "rz"], entanglement= "full",
                          insert_barriers=True)
