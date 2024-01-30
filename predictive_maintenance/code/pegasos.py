@@ -15,29 +15,29 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 test = pd.read_csv("../data/test_fe.csv")
 
-cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
+#cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
 
-train = train[cols]
-x_train_use, y_train_use = train.drop("transported", axis = 1), train["transported"]
+#train = train[cols]
+x_train_use, y_train_use = train.drop("target", axis = 1), train["target"]
 
 x_train_use = x_train_use.to_numpy()
 y_train_use = y_train_use.to_numpy()
 
 num_qubits=len(cols)-1
-#taus = [1, 10, 20, 50, 100, 200,250, 300, 350]
-taus=[400,500]
+taus = [1, 10, 20, 50, 100, 200, 300, 400]
+#taus=[400,500]
 Cs = [10, 100, 200, 500, 750, 1000]
 
 import time
 
 from sklearn.metrics import classification_report,f1_score, precision_score, recall_score, confusion_matrix
 
-test = test[cols]
+#test = test[cols]
 
-x_test, y_test = test.drop("transported", axis =1), test["transported"]
+x_test, y_test = test.drop("target", axis =1), test["target"]
 
 x_test = x_test.to_numpy()
 y_test = y_test.to_numpy()
