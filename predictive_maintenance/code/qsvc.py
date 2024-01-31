@@ -7,13 +7,13 @@ from sklearn.metrics import classification_report, confusion_matrix, f1_score, p
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 
-cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
+#cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'target']
 
-train = train[cols]
+#train = train[cols]
 
-x_train_use, y_train_use = train.drop("transported", axis = 1), train["transported"]
+x_train_use, y_train_use = train.drop("target", axis = 1), train["target"]
 
 x_train, x_val, y_train, y_val = train_test_split(x_train_use, y_train_use, train_size=0.8, random_state = 42)
 
@@ -64,9 +64,9 @@ recall_train = recall_score(y_train_use, pred_use)
 
 test = pd.read_csv("../data/test_fe.csv")
 
-test = test[cols]
+#test = test[cols]
 
-x_test, y_test = test.drop("transported", axis =1), test["transported"]
+x_test, y_test = test.drop("target", axis =1), test["target"]
 
 pred_test = model.predict(x_test)
 
