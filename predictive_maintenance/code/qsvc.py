@@ -20,7 +20,7 @@ x_train, x_val, y_train, y_val = train_test_split(x_train_use, y_train_use, trai
 x_train=np.array(x_train)
 y_train=np.array(y_train)
 
-num_qubits=len(cols)-1
+num_qubits=train.shape[1]-1
 
 from qiskit.circuit.library import PauliFeatureMap
 

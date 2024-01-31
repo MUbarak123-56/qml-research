@@ -26,7 +26,7 @@ x_train_use, y_train_use = train.drop("target", axis = 1), train["target"]
 x_train_use = x_train_use.to_numpy()
 y_train_use = y_train_use.to_numpy()
 
-num_qubits=len(cols)-1
+num_qubits=train.shape[0]-1
 taus = [1, 10, 20, 50, 100, 200, 300, 400]
 #taus=[400,500]
 Cs = [10, 100, 200, 500, 750, 1000]
