@@ -126,7 +126,7 @@ def vqc_runtime(ansatz, optimizer):
 
 #optim = ["cobyla", "spsa"]
 #ansatz_list = ["su2", "two_local", "n_local"]
-optim = ["cobyla"]
+optim = ["spsa"]
 ansatz_list = ["su2"]
 for i in range(len(optim)):
     for j in range(len(ansatz_list)):

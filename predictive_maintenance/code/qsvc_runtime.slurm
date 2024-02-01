@@ -4,7 +4,7 @@
 #SBATCH --nodes=1   
 #SBATCH --ntasks=10
 #SBATCH --time=07-00:00:00
-#SBATCH --mem=500G
+#SBATCH --mem=100G
 #SBATCH --output=qsvc_runtime.out
 #SBATCH --error=qsvc_runtime.err
 #SBATCH --job-name=parallel
