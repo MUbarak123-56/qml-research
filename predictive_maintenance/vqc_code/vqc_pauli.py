@@ -63,25 +63,15 @@ from qiskit.circuit import ParameterVector, Parameter
 ### Feature map
 pauli_feature_map = PauliFeatureMap(feature_dimension=x_train_use.shape[1],reps=1, paulis=['ZZ'])
 
-reps = 3
-### Ansatzes
-ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = reps, su2_gates=["ry", "rz"], entanglement= "full",
-                         insert_barriers=True)
-ansatz_two_local = TwoLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=["ry", "rz"],entanglement_blocks="cx",
-                                     entanglement="linear", reps=reps, insert_barriers=True)
 
-theta = Parameter("θ")
-ansatz_n_local = NLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=[RXGate(theta), CRZGate(theta)],
-                        entanglement_blocks=CCXGate(),
-                        entanglement=[[0, 1, 2], [0,2,1]],reps=reps,insert_barriers=True)
 
 ### Optimizers
-num_iter=100
+num_iter=250
 cobyla = COBYLA(maxiter = num_iter)
 spsa = SPSA(maxiter = num_iter)
 #reps = 2
 
-def plot_confusion_matrix(conf_matrix, ansatz, optimizer):
+def plot_confusion_matrix(conf_matrix, ansatz, optimizer, reps):
     #num = len(os.listdir("../vqc_conf/train_"))
     conf_num = "../vqc_conf/train_process/" + str(ansatz) + "_" + str(optimizer) + "_" + str(reps) + ".png"
     plt.figure(figsize=(8, 6))
@@ -95,7 +85,19 @@ def plot_confusion_matrix(conf_matrix, ansatz, optimizer):
     plt.savefig(conf_num)
     plt.show()
     
-def vqc_exp(ansatz, optimizer):
+def vqc_exp(ansatz, optimizer, reps):
+    
+    reps = reps
+    ### Ansatzes
+    ansatz_su = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = reps, su2_gates=["ry", "rz"], entanglement= "full",
+                             insert_barriers=True)
+    ansatz_two_local = TwoLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=["ry", "rz"],entanglement_blocks="cx",
+                                         entanglement="linear", reps=reps, insert_barriers=True)
+
+    theta = Parameter("θ")
+    ansatz_n_local = NLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=[RXGate(theta), CRZGate(theta)],
+                            entanglement_blocks=CCXGate(),
+                            entanglement=[[0, 1, 2], [0,2,1]],reps=reps,insert_barriers=True)
     
     if optimizer == "cobyla":
         optim_use = cobyla
@@ -149,7 +151,7 @@ def vqc_exp(ansatz, optimizer):
     pred_test = vqc.predict(x_test)
     conf_matrix = confusion_matrix(y_test, pred_test)
 
-    plot_confusion_matrix(conf_matrix, ansatz, optimizer)
+    plot_confusion_matrix(conf_matrix, ansatz, optimizer, reps)
     print(classification_report(y_test, pred_test))
     print("\n")
 
@@ -189,9 +191,11 @@ def vqc_exp(ansatz, optimizer):
     # clear objective value history
     #objective_func_vals = []
     #return df
-    
+
+reps = [1,2,3]
 optim = ["cobyla", "spsa"]
 ansatz_list = ["su2", "two_local", "n_local"]
-for i in range(len(optim)):
-    for j in range(len(ansatz_list)):
-        vqc_exp(ansatz_list[j], optim[i])
+for k in range(len(reps)):
+    for i in range(len(optim)):
+        for j in range(len(ansatz_list)):
+            vqc_exp(ansatz_list[j], optim[i], reps[k])

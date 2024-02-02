@@ -22,10 +22,10 @@ import os
 
 train = pd.read_csv("../data/train_fe.csv")
 
-cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
+cols = ['type', 'air_temperature_k', 'process_temperature_k','rotational_speed_rpm', 'torque_nm', 'tool_wear_min']
 
 x_train = train[cols]
-y_train = train["transported"]
+y_train = train["target"]
 
 sizes = np.linspace(0.1,1,8)
 sizes = list(sizes)
@@ -126,7 +126,7 @@ def vqc_runtime(ansatz, optimizer):
 
 #optim = ["cobyla", "spsa"]
 #ansatz_list = ["su2", "two_local", "n_local"]
-optim = ["cobyla"]
+optim = ["spsa"]
 ansatz_list = ["su2"]
 for i in range(len(optim)):
     for j in range(len(ansatz_list)):
