@@ -18,7 +18,7 @@ from qiskit import BasicAer
 from qiskit.utils import algorithm_globals
 import time
 
-num_qubits = 6
+num_qubits = len(cols)
 algorithm_globals.random_seed = 12345
 
 # Define the feature map
@@ -33,20 +33,20 @@ model = QSVC(quantum_kernel=qkernel)
 sizes = np.linspace(0.1,1,10)
 sizes = list(sizes)
 
-#size = pd.DataFrame()
-#for i in range(len(sizes)):
-#    numbers = np.random.randint(0,high=len(train), size=round(len(train)*sizes[i]))
-#    new_x = np.array(x_train.iloc[numbers,:].reset_index(drop=True))
-#    new_y = np.array(y_train.iloc[numbers])
-#    start = time.time()
-#    model.fit(new_x, new_y)
-#    stop = time.time()
-#    elapsed=stop-start
-#    size.loc[i, "size"] = sizes[i]*len(train)
-#    size.loc[i, "model"] = "QSVC"
-#    size.loc[i, "runtime"] = elapsed
+size = pd.DataFrame()
+for i in range(len(sizes)):
+    numbers = np.random.randint(0,high=len(train), size=round(len(train)*sizes[i]))
+    new_x = np.array(x_train.iloc[numbers,:].reset_index(drop=True))
+    new_y = np.array(y_train.iloc[numbers])
+    start = time.time()
+    model.fit(new_x, new_y)
+    stop = time.time()
+    elapsed=stop-start
+    size.loc[i, "size"] = sizes[i]*len(train)
+    size.loc[i, "model"] = "QSVC"
+    size.loc[i, "runtime"] = elapsed
     #size.loc[i,"kernel"] = typ
-#    print("size ", i)
+    print("size ", i)
 
 #size.to_csv("../results/runtime_size/qsvc.csv", index=False)
 feat = pd.DataFrame()

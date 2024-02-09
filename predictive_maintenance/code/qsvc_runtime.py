@@ -3,7 +3,7 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 
-train = pd.read_csv("../data/train_small.csv")
+train = pd.read_csv("../data/train_fe.csv")
 
 cols = ['type', 'air_temperature_k', 'process_temperature_k','rotational_speed_rpm', 'torque_nm', 'tool_wear_min']
 

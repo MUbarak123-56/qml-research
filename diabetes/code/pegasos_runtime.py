@@ -23,7 +23,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-num_qubits = 7
+num_qubits = len(cols)
 algorithm_globals.random_seed = 12345
 
 # Define the feature map
@@ -33,7 +33,7 @@ feature_map = PauliFeatureMap(feature_dimension=num_qubits, reps=1)
 qkernel = FidelityQuantumKernel(feature_map=feature_map)
 
 # Initialize the QSVC model
-model = PegasosQSVC(quantum_kernel=qkernel, C=100, num_steps=300)
+model = PegasosQSVC(quantum_kernel=qkernel, C=200, num_steps=300)
 
 sizes = np.linspace(0.1,1,10)
 sizes = list(sizes)
