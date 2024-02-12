@@ -20,9 +20,10 @@ from qiskit_machine_learning.algorithms.classifiers import VQC
 import os
 
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 
-cols = ['type', 'air_temperature_k', 'process_temperature_k','rotational_speed_rpm', 'torque_nm', 'tool_wear_min']
+cols = ['pregnancy_occurence', 'glucose_concentration', 'blood_pressure',
+       'triceps_foldness', 'serum_insulin', 'bmi', 'predigree_function', 'age']
 
 x_train = train[cols]
 y_train = train["target"]
@@ -48,18 +49,18 @@ def vqc_runtime(ansatz, optimizer):
             optim_use = spsa
 
         if ansatz == "su2":
-            ansatz_use = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 2, su2_gates=["ry", "rz"],
+            ansatz_use = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 3, su2_gates=["ry", "rz"],
                                       entanglement= "full", insert_barriers=True)
         elif ansatz == "two_local":
             ansatz_use = ansatz_two_local = TwoLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=["ry", "rz"],
-                                                     entanglement_blocks="cx", entanglement="linear", reps=2,
+                                                     entanglement_blocks="cx", entanglement="linear", reps=3,
                                                      insert_barriers=True)
         elif ansatz == "n_local":
             #ansatz_use = ansatz_n_local
             theta = Parameter("θ")
             ansatz_use = NLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=[RXGate(theta), CRZGate(theta)],
                         entanglement_blocks=CCXGate(),
-                        entanglement=[[0, 1, 2], [0,2,1]],reps=2,insert_barriers=True)
+                        entanglement=[[0, 1, 2], [0,2,1]],reps=3,insert_barriers=True)
 
 
         #ansatz = ansatz_use
@@ -93,18 +94,18 @@ def vqc_runtime(ansatz, optimizer):
             optim_use = spsa
 
         if ansatz == "su2":
-            ansatz_use = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 2, su2_gates=["ry", "rz"], entanglement= "full",
+            ansatz_use = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 3, su2_gates=["ry", "rz"], entanglement= "full",
                              insert_barriers=True)
         elif ansatz == "two_local":
             ansatz_use = ansatz_two_local = TwoLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=["ry", "rz"],
-                                                     entanglement_blocks="cx", entanglement="linear", reps=2,
+                                                     entanglement_blocks="cx", entanglement="linear", reps=3,
                                                      insert_barriers=True)
         elif ansatz == "n_local":
             #ansatz_use = ansatz_n_local
             theta = Parameter("θ")
             ansatz_use = NLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=[RXGate(theta), CRZGate(theta)],
                         entanglement_blocks=CCXGate(),
-                        entanglement=[[0, 1, 2], [0,2,1]],reps=2,insert_barriers=True)
+                        entanglement=[[0, 1, 2], [0,2,1]],reps=3,insert_barriers=True)
 
 
         #ansatz = ansatz_use

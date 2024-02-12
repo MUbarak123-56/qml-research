@@ -7,7 +7,7 @@ from sklearn.metrics import classification_report, confusion_matrix, f1_score, p
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 
 #cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'target']
 
