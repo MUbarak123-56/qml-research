@@ -20,7 +20,7 @@ from qiskit_machine_learning.algorithms.classifiers import VQC
 import os
 
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 
 cols = ['type', 'air_temperature_k', 'process_temperature_k','rotational_speed_rpm', 'torque_nm', 'tool_wear_min']
 

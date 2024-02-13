@@ -3,7 +3,7 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 
 cols = ['pregnancy_occurence', 'glucose_concentration', 'blood_pressure',
        'triceps_foldness', 'serum_insulin', 'bmi', 'predigree_function', 'age']
