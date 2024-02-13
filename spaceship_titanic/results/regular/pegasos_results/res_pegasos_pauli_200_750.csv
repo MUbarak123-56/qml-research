@@ -1,2 +1,0 @@
-feature_map_type,train_score,val_score,f1_val,f1_train,prec_train,prec_val,recall_train,recall_val,Quantum Kernel,Training time,Model,tau,C
-Pauli,0.5596774193548387,0.5256410256410257,0.6782608695652175,0.6922209695603156,0.5320623916811091,0.5131578947368421,0.9903225806451613,1.0,Yes,241.94069647789001,PEGASOS,200,750
