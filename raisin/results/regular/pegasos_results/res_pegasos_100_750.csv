@@ -1,0 +1,2 @@
+f1_test,f1_train,prec_train,prec_test,recall_train,recall_test,elapsed,model,tau,C
+0.0,0.03686635944700461,1.0,0.0,0.018779342723004695,0.0,43.18025803565979,Pegasos QSVC,100,750
