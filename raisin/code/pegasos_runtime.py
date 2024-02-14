@@ -3,10 +3,10 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 
-train = pd.read_csv("../data/train_small.csv")
+train = pd.read_csv("../data/train_fe.csv")
 
-cols = ['pregnancy_occurence', 'glucose_concentration', 'blood_pressure',
-       'triceps_foldness', 'serum_insulin', 'bmi', 'predigree_function', 'age']
+cols = ['area', 'majoraxislength', 'minoraxislength', 'eccentricity',
+       'convexarea', 'extent', 'perimeter']
 
 x_train = train[cols]
 y_train = train["target"]
