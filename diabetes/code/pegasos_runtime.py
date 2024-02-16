@@ -64,7 +64,7 @@ for i in range(1,len(cols)):
     qkernel = FidelityQuantumKernel(feature_map=feature_map)
 
     # Initialize the QSVC model
-    model = PegasosQSVC(quantum_kernel=qkernel, C=750, num_steps=300)
+    model = PegasosQSVC(quantum_kernel=qkernel, C=200, num_steps=300)
     start = time.time()
     model.fit(new_x, np.array(y_train))
     stop = time.time()
