@@ -19,7 +19,7 @@ import time
 from qiskit_machine_learning.algorithms.classifiers import VQC
 import os
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 test = pd.read_csv("../data/test_fe.csv")
 
 #cols = ['age','roomservice', 'spa', 'vrdeck', 'homeplanet_earth', 'homeplanet_europa', 'homeplanet_mars', 'transported']
