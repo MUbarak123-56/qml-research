@@ -1,0 +1,9 @@
+size,model,runtime,data
+55.6,vqc_su2_spsa,266.6691167354584,predictive maintenance
+127.0857142857143,vqc_su2_spsa,609.1616349220276,predictive maintenance
+198.5714285714286,vqc_su2_spsa,950.873044013977,predictive maintenance
+270.0571428571429,vqc_su2_spsa,1255.217131137848,predictive maintenance
+341.54285714285714,vqc_su2_spsa,1544.3520102500916,predictive maintenance
+413.02857142857147,vqc_su2_spsa,1842.381005048752,predictive maintenance
+484.5142857142858,vqc_su2_spsa,2258.248341560364,predictive maintenance
+556.0,vqc_su2_spsa,2539.809586763382,predictive maintenance

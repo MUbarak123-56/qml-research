@@ -1,0 +1,41 @@
+size,model,runtime,data
+55.6,Pegasos QSVC,137.4403932094574,predictive maintenance
+111.2,Pegasos QSVC,202.31148290634155,predictive maintenance
+166.8,Pegasos QSVC,249.78282690048215,predictive maintenance
+222.4,Pegasos QSVC,253.4295163154602,predictive maintenance
+278.0,Pegasos QSVC,270.9536819458008,predictive maintenance
+333.6,Pegasos QSVC,284.64882040023804,predictive maintenance
+389.2000000000001,Pegasos QSVC,286.05956268310547,predictive maintenance
+444.8,Pegasos QSVC,284.7200171947479,predictive maintenance
+500.4,Pegasos QSVC,283.73181986808777,predictive maintenance
+556.0,Pegasos QSVC,268.3814072608948,predictive maintenance
+55.6,SVC_linear,0.0045962333679199,predictive maintenance
+111.2,SVC_linear,0.0040688514709472,predictive maintenance
+166.8,SVC_linear,0.0042908191680908,predictive maintenance
+222.4,SVC_linear,0.005204439163208,predictive maintenance
+278.0,SVC_linear,0.0061330795288085,predictive maintenance
+333.6,SVC_linear,0.0083255767822265,predictive maintenance
+389.2000000000001,SVC_linear,0.0098259449005126,predictive maintenance
+444.8,SVC_linear,0.0104041099548339,predictive maintenance
+500.4,SVC_linear,0.0123639106750488,predictive maintenance
+556.0,SVC_linear,0.0143976211547851,predictive maintenance
+55.6,SVC_rbf,0.0044500827789306,predictive maintenance
+111.2,SVC_rbf,0.0039122104644775,predictive maintenance
+166.8,SVC_rbf,0.004913330078125,predictive maintenance
+222.4,SVC_rbf,0.006284475326538,predictive maintenance
+278.0,SVC_rbf,0.0073025226593017,predictive maintenance
+333.6,SVC_rbf,0.0086989402770996,predictive maintenance
+389.2000000000001,SVC_rbf,0.0097954273223876,predictive maintenance
+444.8,SVC_rbf,0.0122406482696533,predictive maintenance
+500.4,SVC_rbf,0.014280080795288,predictive maintenance
+556.0,SVC_rbf,0.0174176692962646,predictive maintenance
+55.6,QSVC,18.367398500442505,predictive maintenance
+111.2,QSVC,67.81121015548706,predictive maintenance
+166.8,QSVC,158.46748638153076,predictive maintenance
+222.4,QSVC,295.56463527679443,predictive maintenance
+278.0,QSVC,472.2777020931244,predictive maintenance
+333.6,QSVC,687.1487760543823,predictive maintenance
+389.2000000000001,QSVC,916.5832931995392,predictive maintenance
+444.8,QSVC,1215.5978672504425,predictive maintenance
+500.4,QSVC,1573.276822566986,predictive maintenance
+556.0,QSVC,2005.2534437179563,predictive maintenance

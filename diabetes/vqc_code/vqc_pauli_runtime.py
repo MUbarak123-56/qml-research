@@ -49,18 +49,18 @@ def vqc_runtime(ansatz, optimizer):
             optim_use = spsa
 
         if ansatz == "su2":
-            ansatz_use = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 3, su2_gates=["ry", "rz"],
+            ansatz_use = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 1, su2_gates=["ry", "rz"],
                                       entanglement= "full", insert_barriers=True)
         elif ansatz == "two_local":
             ansatz_use = ansatz_two_local = TwoLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=["ry", "rz"],
-                                                     entanglement_blocks="cx", entanglement="linear", reps=3,
+                                                     entanglement_blocks="cx", entanglement="linear", reps=1,
                                                      insert_barriers=True)
         elif ansatz == "n_local":
             #ansatz_use = ansatz_n_local
             theta = Parameter("θ")
             ansatz_use = NLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=[RXGate(theta), CRZGate(theta)],
                         entanglement_blocks=CCXGate(),
-                        entanglement=[[0, 1, 2], [0,2,1]],reps=3,insert_barriers=True)
+                        entanglement=[[0, 1, 2], [0,2,1]],reps=1,insert_barriers=True)
 
 
         #ansatz = ansatz_use
@@ -94,18 +94,18 @@ def vqc_runtime(ansatz, optimizer):
             optim_use = spsa
 
         if ansatz == "su2":
-            ansatz_use = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 3, su2_gates=["ry", "rz"], entanglement= "full",
+            ansatz_use = EfficientSU2(num_qubits=pauli_feature_map.width(), reps = 1, su2_gates=["ry", "rz"], entanglement= "full",
                              insert_barriers=True)
         elif ansatz == "two_local":
             ansatz_use = ansatz_two_local = TwoLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=["ry", "rz"],
-                                                     entanglement_blocks="cx", entanglement="linear", reps=3,
+                                                     entanglement_blocks="cx", entanglement="linear", reps=1,
                                                      insert_barriers=True)
         elif ansatz == "n_local":
             #ansatz_use = ansatz_n_local
             theta = Parameter("θ")
             ansatz_use = NLocal(num_qubits=pauli_feature_map.width(),rotation_blocks=[RXGate(theta), CRZGate(theta)],
                         entanglement_blocks=CCXGate(),
-                        entanglement=[[0, 1, 2], [0,2,1]],reps=3,insert_barriers=True)
+                        entanglement=[[0, 1, 2], [0,2,1]],reps=1,insert_barriers=True)
 
 
         #ansatz = ansatz_use
@@ -127,7 +127,7 @@ def vqc_runtime(ansatz, optimizer):
 
 #optim = ["cobyla", "spsa"]
 #ansatz_list = ["su2", "two_local", "n_local"]
-optim = ["spsa"]
+optim = ["cobyla"]
 ansatz_list = ["su2"]
 for i in range(len(optim)):
     for j in range(len(ansatz_list)):

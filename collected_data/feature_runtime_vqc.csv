@@ -1,0 +1,19 @@
+num_features,model,runtime,data
+2.0,vqc_su2_spsa,433.9680144786835,predictive maintenance
+3.0,vqc_su2_spsa,691.59840965271,predictive maintenance
+4.0,vqc_su2_spsa,1056.0970487594604,predictive maintenance
+5.0,vqc_su2_spsa,1879.5183901786804,predictive maintenance
+6.0,vqc_su2_spsa,2781.881721019745,predictive maintenance
+2.0,vqc_su2_spsa,580.088198184967,diabetes
+3.0,vqc_su2_spsa,929.9584214687349,diabetes
+4.0,vqc_su2_spsa,1409.169986963272,diabetes
+5.0,vqc_su2_spsa,2449.219372987747,diabetes
+6.0,vqc_su2_spsa,3610.370181798935,diabetes
+7.0,vqc_su2_spsa,4821.676506757736,diabetes
+8.0,vqc_su2_spsa,5504.931709051132,diabetes
+2.0,vqc_su2_cobyla,268.506765127182,raisin
+3.0,vqc_su2_cobyla,415.0102324485779,raisin
+4.0,vqc_su2_cobyla,598.7897138595581,raisin
+5.0,vqc_su2_cobyla,1088.712200164795,raisin
+6.0,vqc_su2_cobyla,1474.647259473801,raisin
+7.0,vqc_su2_cobyla,2011.656044721604,raisin

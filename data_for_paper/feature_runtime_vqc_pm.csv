@@ -1,0 +1,6 @@
+num_features,model,runtime,data
+2.0,vqc_su2_spsa,433.9680144786835,predictive maintenance
+3.0,vqc_su2_spsa,691.59840965271,predictive maintenance
+4.0,vqc_su2_spsa,1056.0970487594604,predictive maintenance
+5.0,vqc_su2_spsa,1879.5183901786804,predictive maintenance
+6.0,vqc_su2_spsa,2781.881721019745,predictive maintenance

@@ -1,0 +1,23 @@
+num_features,model,runtime,data
+2.0,Pegasos QSVC,39.54822492599487,predictive maintenance
+3.0,Pegasos QSVC,68.46115183830261,predictive maintenance
+4.0,Pegasos QSVC,114.966881275177,predictive maintenance
+5.0,Pegasos QSVC,151.56979250907898,predictive maintenance
+6.0,Pegasos QSVC,217.6320223808289,predictive maintenance
+1.0,SVC_linear,0.0192751884460449,predictive maintenance
+2.0,SVC_linear,0.0265727043151855,predictive maintenance
+3.0,SVC_linear,0.0177915096282959,predictive maintenance
+4.0,SVC_linear,0.0160889625549316,predictive maintenance
+5.0,SVC_linear,0.0144410133361816,predictive maintenance
+6.0,SVC_linear,0.0140714645385742,predictive maintenance
+1.0,SVC_rbf,0.0264112949371337,predictive maintenance
+2.0,SVC_rbf,0.0368165969848632,predictive maintenance
+3.0,SVC_rbf,0.0254075527191162,predictive maintenance
+4.0,SVC_rbf,0.0208539962768554,predictive maintenance
+5.0,SVC_rbf,0.0181415081024169,predictive maintenance
+6.0,SVC_rbf,0.0171899795532226,predictive maintenance
+2.0,QSVC,298.3625977039337,predictive maintenance
+3.0,QSVC,534.0221221446991,predictive maintenance
+4.0,QSVC,873.8990898132324,predictive maintenance
+5.0,QSVC,1308.7385804653168,predictive maintenance
+6.0,QSVC,1935.2609033584597,predictive maintenance
