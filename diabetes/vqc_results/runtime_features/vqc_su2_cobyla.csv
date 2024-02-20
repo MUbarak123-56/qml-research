@@ -1,0 +1,8 @@
+num_features,model,runtime
+2.0,vqc_su2_cobyla,125.99405074119568
+3.0,vqc_su2_cobyla,201.69605016708374
+4.0,vqc_su2_cobyla,296.54769253730774
+5.0,vqc_su2_cobyla,421.1384246349335
+6.0,vqc_su2_cobyla,573.627813577652
+7.0,vqc_su2_cobyla,765.0153782367706
+8.0,vqc_su2_cobyla,1025.0727665424347
