@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --mail-user=mubarak.a.ganiyu@vanderbilt.edu
+#SBATCH --mail-user=manda.li@vanderbilt.edu
 #SBATCH --mail-type=ALL
 #SBATCH --nodes=10  
 #SBATCH --ntasks=20
