@@ -3,7 +3,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --nodes=1   
 #SBATCH --ntasks=10
-#SBATCH --time=07-00:00:00
+#SBATCH --time=10-00:00:00
 #SBATCH --mem=100G
 #SBATCH --output=qsvc_runtime.out
 #SBATCH --error=qsvc_runtime.err
