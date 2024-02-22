@@ -1,0 +1,2 @@
+ERROR:smemwatch:This job has exceeded its memory quota and will be terminated
+ERROR:smemwatch:Killing process 9347 cgroup RSS size 71705.80078125 MB > 71705.0 MB

@@ -3,12 +3,11 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 
-cols = ['area', 'majoraxislength', 'minoraxislength', 'eccentricity',
-       'convexarea', 'extent', 'perimeter']
+#cols = ['area', 'majoraxislength', 'minoraxislength', 'eccentricity','convexarea', 'extent', 'perimeter']
 
-x_train = train[cols]
+x_train = train.drop('target', axis=1)
 y_train = train["target"]
 
 from qiskit.circuit.library import PauliFeatureMap
