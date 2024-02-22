@@ -48,7 +48,7 @@ for i in range(len(sizes)):
     #size.loc[i,"kernel"] = typ
     print("size ", i)
 
-#size.to_csv("../results/runtime_size/qsvc.csv", index=False)
+size.to_csv("../results/runtime_size/qsvc.csv", index=False)
 feat = pd.DataFrame()
 for i in range(1,len(cols)):
     new_x = np.array(x_train.loc[:,cols[:i+1]])
