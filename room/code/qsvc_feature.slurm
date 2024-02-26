@@ -5,10 +5,10 @@
 #SBATCH --ntasks=10
 #SBATCH --time=10-00:00:00
 #SBATCH --mem=100G
-#SBATCH --output=qsvc_runtime.out
-#SBATCH --error=qsvc_runtime.err
+#SBATCH --output=qsvc_feature.out
+#SBATCH --error=qsvc_feature.err
 #SBATCH --job-name=parallel
 #SBATCH --account=p_dsi
 #SBATCH --partition=production
 
-python qsvc_runtime.py
+python qsvc_feature.py
