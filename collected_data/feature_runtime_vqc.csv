@@ -1,10 +1,8 @@
 num_features,model,runtime,data
-2.0,vqc_su2_cobyla,268.506765127182,room
-3.0,vqc_su2_cobyla,415.0102324485779,room
-4.0,vqc_su2_cobyla,598.7897138595581,room
-5.0,vqc_su2_cobyla,1088.712200164795,room
-6.0,vqc_su2_cobyla,1474.647259473801,room
-7.0,vqc_su2_cobyla,2011.656044721604,room
+2.0,vqc_su2_cobyla,428.368795633316,room
+3.0,vqc_su2_cobyla,707.956262588501,room
+4.0,vqc_su2_cobyla,1041.6057770252228,room
+5.0,vqc_su2_cobyla,1464.540962934494,room
 2.0,vqc_su2_spsa,433.9680144786835,predictive maintenance
 3.0,vqc_su2_spsa,691.59840965271,predictive maintenance
 4.0,vqc_su2_spsa,1056.0970487594604,predictive maintenance

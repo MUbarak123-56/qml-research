@@ -20,10 +20,9 @@ from qiskit_machine_learning.algorithms.classifiers import VQC
 import os
 
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 
-cols = ['area', 'majoraxislength', 'minoraxislength', 'eccentricity',
-       'convexarea', 'extent', 'perimeter']
+cols = ['temperature', 'humidity', 'light', 'co2', 'humidityratio']
 
 x_train = train[cols]
 y_train = train["target"]

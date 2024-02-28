@@ -3,10 +3,9 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 
-train = pd.read_csv("../data/train_fe.csv")
+train = pd.read_csv("../data/train_small.csv")
 
-cols = ['area', 'majoraxislength', 'minoraxislength', 'eccentricity',
-       'convexarea', 'extent', 'perimeter']
+cols = ['temperature', 'humidity', 'light', 'co2', 'humidityratio']
 
 x_train = train[cols]
 y_train = train["target"]
