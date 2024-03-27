@@ -1,20 +1,12 @@
 num_features,model,runtime,data
-1.0,SVC_linear,0.0210621356964111,diabetes
-2.0,SVC_linear,0.0178055763244628,diabetes
-3.0,SVC_linear,0.0118045806884765,diabetes
-4.0,SVC_linear,0.0116641521453857,diabetes
-5.0,SVC_linear,0.0118732452392578,diabetes
-6.0,SVC_linear,0.0122323036193847,diabetes
-7.0,SVC_linear,0.0120003223419189,diabetes
-8.0,SVC_linear,0.0129797458648681,diabetes
-1.0,SVC_rbf,0.0349707603454589,diabetes
-2.0,SVC_rbf,0.017127513885498,diabetes
-3.0,SVC_rbf,0.0178556442260742,diabetes
-4.0,SVC_rbf,0.017773151397705,diabetes
-5.0,SVC_rbf,0.0176863670349121,diabetes
-6.0,SVC_rbf,0.0179381370544433,diabetes
-7.0,SVC_rbf,0.0187025070190429,diabetes
-8.0,SVC_rbf,0.0182576179504394,diabetes
+1.0,SVC_poly_5,0.2009387016296386,diabetes
+2.0,SVC_poly_5,0.1047875881195068,diabetes
+3.0,SVC_poly_5,0.671165943145752,diabetes
+4.0,SVC_poly_5,0.3532466888427734,diabetes
+5.0,SVC_poly_5,0.117551565170288,diabetes
+6.0,SVC_poly_5,0.236328125,diabetes
+7.0,SVC_poly_5,0.1822302341461181,diabetes
+8.0,SVC_poly_5,0.0758693218231201,diabetes
 2.0,Pegasos QSVC,39.94274950027466,diabetes
 3.0,Pegasos QSVC,77.41471362113953,diabetes
 4.0,Pegasos QSVC,123.93903255462646,diabetes
@@ -29,16 +21,11 @@ num_features,model,runtime,data
 6.0,QSVC,1107.2230048179626,diabetes
 7.0,QSVC,1591.6543850898745,diabetes
 8.0,QSVC,2338.43257188797,diabetes
-1.0,SVC_linear,0.0558462142944335,room
-2.0,SVC_linear,0.0470848083496093,room
-3.0,SVC_linear,0.0223817825317382,room
-4.0,SVC_linear,0.0179870128631591,room
-5.0,SVC_linear,0.0215187072753906,room
-1.0,SVC_rbf,0.1206433773040771,room
-2.0,SVC_rbf,0.0786857604980468,room
-3.0,SVC_rbf,0.0191154479980468,room
-4.0,SVC_rbf,0.0192606449127197,room
-5.0,SVC_rbf,0.0238256454467773,room
+1.0,SVC_linear,0.0520005226135253,room
+2.0,SVC_linear,0.0370032787322998,room
+3.0,SVC_linear,0.0162296295166015,room
+4.0,SVC_linear,0.0128083229064941,room
+5.0,SVC_linear,0.0151994228363037,room
 2.0,QSVC,11266.55714416504,room
 3.0,QSVC,15409.895641088486,room
 4.0,QSVC,24624.949368476868,room
@@ -52,37 +39,24 @@ num_features,model,runtime,data
 4.0,Pegasos QSVC,114.966881275177,predictive maintenance
 5.0,Pegasos QSVC,151.56979250907898,predictive maintenance
 6.0,Pegasos QSVC,217.6320223808289,predictive maintenance
-1.0,SVC_linear,0.0192751884460449,predictive maintenance
-2.0,SVC_linear,0.0265727043151855,predictive maintenance
-3.0,SVC_linear,0.0177915096282959,predictive maintenance
-4.0,SVC_linear,0.0160889625549316,predictive maintenance
-5.0,SVC_linear,0.0144410133361816,predictive maintenance
-6.0,SVC_linear,0.0140714645385742,predictive maintenance
-1.0,SVC_rbf,0.0264112949371337,predictive maintenance
-2.0,SVC_rbf,0.0368165969848632,predictive maintenance
-3.0,SVC_rbf,0.0254075527191162,predictive maintenance
-4.0,SVC_rbf,0.0208539962768554,predictive maintenance
-5.0,SVC_rbf,0.0181415081024169,predictive maintenance
-6.0,SVC_rbf,0.0171899795532226,predictive maintenance
+1.0,SVC_poly_3,0.0110092163085937,predictive maintenance
+2.0,SVC_poly_3,0.0159926414489746,predictive maintenance
+3.0,SVC_poly_3,0.0245990753173828,predictive maintenance
+4.0,SVC_poly_3,0.0155677795410156,predictive maintenance
+5.0,SVC_poly_3,0.0112981796264648,predictive maintenance
+6.0,SVC_poly_3,0.0090563297271728,predictive maintenance
 2.0,QSVC,298.3625977039337,predictive maintenance
 3.0,QSVC,534.0221221446991,predictive maintenance
 4.0,QSVC,873.8990898132324,predictive maintenance
 5.0,QSVC,1308.7385804653168,predictive maintenance
 6.0,QSVC,1935.26090335846,predictive maintenance
-1.0,SVC_linear,0.0282983779907226,raisin
-2.0,SVC_linear,0.0176813602447509,raisin
-3.0,SVC_linear,0.0161187648773193,raisin
-4.0,SVC_linear,0.0134346485137939,raisin
-5.0,SVC_linear,0.0131542682647705,raisin
-6.0,SVC_linear,0.0132222175598144,raisin
-7.0,SVC_linear,0.0109326839447021,raisin
-1.0,SVC_rbf,0.0440378189086914,raisin
-2.0,SVC_rbf,0.0249547958374023,raisin
-3.0,SVC_rbf,0.0221385955810546,raisin
-4.0,SVC_rbf,0.0203983783721923,raisin
-5.0,SVC_rbf,0.0201098918914794,raisin
-6.0,SVC_rbf,0.0191202163696289,raisin
-7.0,SVC_rbf,0.0190722942352294,raisin
+1.0,SVC_poly_5,0.056039810180664,raisin
+2.0,SVC_poly_5,0.2068901062011718,raisin
+3.0,SVC_poly_5,0.3145010471343994,raisin
+4.0,SVC_poly_5,0.0594153404235839,raisin
+5.0,SVC_poly_5,0.0530769824981689,raisin
+6.0,SVC_poly_5,0.0457844734191894,raisin
+7.0,SVC_poly_5,0.0650210380554199,raisin
 2.0,QSVC,463.425155878067,raisin
 3.0,QSVC,710.2673699855804,raisin
 4.0,QSVC,3013.327295064926,raisin
