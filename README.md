@@ -13,6 +13,15 @@ Here is a list of the different data sets that were used for the research work.
 - Room: https://www.kaggle.com/datasets/sachinsharma1123/room-occupancy
 - Diabetes: https://www.kaggle.com/datasets/girishvutukuri/diabetes-binary-classification
 
+## Methdology
+
+- The experiment was conducted using Vanderbilt University's ACCRE cloud computing resource, with datasets and results organized systematically on GitHub.
+- Datasets were split into training and testing sets (80/20 ratio), with exploratory data analysis (EDA) used to balance class distributions and identify key features.
+- Five classical ML algorithms were trained using grid-search for hyperparameter tuning, while QML algorithms were trained without hyperparameter tuning due to long training times.
+- Optimal models for both classical and QML algorithms were selected based on test performance and runtime, with the less complex model preferred in cases of similar performance.
+- A comparative analysis of runtimes between classical and quantum models was conducted to gauge how feasible QML algos are for adaptation in the real world.
+- After extracting all the experiment’s results in .csv formats, the results were loaded into Tableau for data visualization. 
+
 ## Algorithms
 
 Classical Machine Learning Algorithms
