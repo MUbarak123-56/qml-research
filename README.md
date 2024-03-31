@@ -43,5 +43,18 @@ Quantum Machine Learning Algorithms
 - Tableau
   
 ## References
-
--
+- https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification/data
+- https://www.kaggle.com/datasets/nimapourmoradi/raisin-binary-classification
+- https://www.kaggle.com/datasets/sachinsharma1123/room-occupancy
+- https://www.kaggle.com/datasets/girishvutukuri/diabetes-binary-classification
+- https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+- https://scikit-learn.org/stable/modules/svm.html#classification
+- https://scikit-learn.org/stable/modules/naive_bayes.html#gaussian-naive-bayes
+- https://scikit-learn.org/stable/modules/tree.html#classification
+- https://scikit-learn.org/stable/modules/ensemble.html#random-forests-and-other-randomized-tree-ensembles
+- https://qiskit-community.github.io/qiskit-machine-learning/stubs/qiskit_machine_learning.algorithms.QSVC.html
+- https://qiskit-community.github.io/qiskit-machine-learning/tutorials/07_pegasos_qsvc.html
+- https://qiskit-community.github.io/qiskit-machine-learning/stubs/qiskit_machine_learning.algorithms.VQC.html
+- https://www.ibm.com/quantum/qiskit
+- https://www.vanderbilt.edu/accre/portal/
+- https://www.tableau.com/trial/tableau-software?d=7013y000002RQ7hAAG&nc=7013y000002RQCaAAO&cq_cmp=8846800995&cq_net=g&cq_plac=&gad_source=1&gclid=Cj0KCQjwk6SwBhDPARIsAJ59GweoWcpcNKSLTnQbdVjcipg4q_evOX3EETr1syYf-gl1215IJrxqtGcaAkgNEALw_wcB&gclsrc=aw.ds
