@@ -39,6 +39,7 @@ Quantum Machine Learning Algorithms
 ## Tools & Technologies 
 
 - Python
+- Qiskit
 - ACCRE
 - Tableau
   
