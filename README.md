@@ -1,4 +1,4 @@
-# Quantum ML vs Classical ML Research
+# Quantum ML vs Classical ML Research for Classification
 
 ## Introduction
 
@@ -20,7 +20,7 @@ Here is a list of the different data sets that were used for the research work.
 - Five classical ML algorithms were trained using grid-search for hyperparameter tuning, while QML algorithms were trained without hyperparameter tuning due to long training times.
 - Optimal models for both classical and QML algorithms were selected based on test performance and runtime, with the less complex model preferred in cases of similar performance.
 - A comparative analysis of runtimes between classical and quantum models was conducted to gauge how feasible QML algos are for adaptation in the real world.
-- After extracting all the experiment’s results in .csv formats, the results were loaded into Tableau for data visualization. 
+- After extracting all the experiment’s results in .csv formats, the results were loaded into Tableau for data visualization. The charts can be viewed [here[(https://github.com/MUbarak123-56/qml-research/blob/master/Quantum%20ML%20vs%20Classical%20ML%20research.pdf).
 
 ## Algorithms
 
